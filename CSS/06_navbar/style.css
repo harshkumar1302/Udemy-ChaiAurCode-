@@ -115,6 +115,7 @@ h2 {
 .nav2 .login-btn:hover {
     background-color: #045411;
     border-radius: 50px;
+    transition: ease-in-out 0.3s;
 }
 
 
