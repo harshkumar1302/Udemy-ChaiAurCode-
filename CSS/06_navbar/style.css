@@ -19,7 +19,6 @@ h2 {
 
 
 .nav1 {
-    /* border: 1px solid red; */
     background-color: #a5a5b1;
     padding: 10px;
 }
@@ -31,6 +30,7 @@ h2 {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .nav1 li {
