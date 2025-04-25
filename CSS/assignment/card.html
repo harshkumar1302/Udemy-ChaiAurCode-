@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background: #01010a;
+            overflow: hidden;
+            font-family: "Orbitron", sans-serif;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            perspective: 1500px;
+            gap: 60px;
+            flex-wrap: wrap;
+            z-index: 1;
+        }
+
+        .glow {
+            position: absolute;
+            width: 300vmax;
+            height: 300vmax;
+            background: conic-gradient(from 180deg at 50% 50%, #00faff, #0011ff, #00faff);
+            filter: blur(180px);
+            animation: glowRotate 30s linear infinite;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        .card-content {
+            position: relative;
+            background: rgba(10, 10, 20, 0.85);
+            border-radius: 20px;
+            padding: 20px 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            backdrop-filter: blur(12px);
+            border: 3px solid rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 60px rgba(0, 255, 255, 0.3),
+                0 0 100px rgba(0, 255, 255, 0.1) inset;
+            transition: transform 0.3s ease;
+        }
+
+        .btn {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .float-a {
+            animation: float-a 6s ease-in-out infinite, hueShift 20s infinite linear;
+        }
+
+        .float-b {
+            animation: float-b 7s ease-in-out infinite, hueShift 25s infinite linear;
+        }
+
+        .tilt:hover {
+            transform: rotateY(8deg) rotateX(8deg) scale(1.02);
+        }
+
+        .card-glow {
+            background: linear-gradient(145deg,
+                    rgba(0, 10, 20, 0.95),
+                    rgba(0, 30, 60, 0.85));
+        }
+
+        .card-content img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+        }
+
+        .card-title {
+            font-size: 2.7rem;
+            margin: 15px 0 05px 0;
+            text-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
+        }
+
+        .rainbow {
+            background: linear-gradient(90deg, #00ffff, #00ff99, #00ffff, #00ffcc);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shineText 6s linear infinite;
+        }
+
+        .card-description {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #aaffff;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        .card-btn {
+            background: linear-gradient(90deg, #00ffff, #0088ff);
+            border: none;
+            padding: 12px 20px;
+            color: #ffffff;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .neon-glow {
+            box-shadow: 0 0 20px #00ffff, 0 0 50px #00ffff;
+            text-shadow: 0 0 12px #00ffff, 0 0 22px #00ffff;
+        }
+
+        .card-btn:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 0 70px #00ffff;
+        }
+
+        @keyframes float-a {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @keyframes float-b {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes glowRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 
+@keyframes shineText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+} */
+
+        /* @keyframes hueShift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+} */
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="card">
+            <div class="glow"></div>
+
+            <!-- Card with Image -->
+            <article class="card-content card-glow tilt float-a" id="cardImage">
+                <img src="https://images.unsplash.com/photo-1439405326854-014607f694d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMzk1OTJ8&ixlib=rb-4.0.3&q=85"
+                    alt="Epic Fantasy Image">
+                <h1 class="card-title rainbow">Blue Sea</h1>
+                <p class="card-description">My click from a brezzing wind trip.</p>
+
+                <div class="btn">
+                    <button class="card-btn neon-glow">Buy now</button>
+                    <button class="card-btn neon-glow">Add to wishlist</button>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

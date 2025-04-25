@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-Website(BootStrap)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        footer {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #carouselExample {
+            height: 25vh;
+        }
+
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item img {
+            height: 100%;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+
+        .card .btn {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="content grid-container" style="grid-template-columns: repeat(3, 1fr);">
+            <div id="carouselExample" class="carousel slide" style="grid-column: 1/4;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.pexels.com/photos/1739842/pexels-photo-1739842.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/1739855/pexels-photo-1739855.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.pexels.com/photos/909482/pexels-photo-909482.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch now</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.pexels.com/photos/569380/pexels-photo-569380.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch now</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.pexels.com/photos/569327/pexels-photo-569327.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch now</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        CopyRight &copy Harsh Kumar Suman
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
